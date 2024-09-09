@@ -14,6 +14,9 @@
 		C35F14CA2C8EE11200356C56 /* IABG_Game_UMATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F14C92C8EE11200356C56 /* IABG_Game_UMATests.swift */; };
 		C35F14D42C8EE11200356C56 /* IABG_Game_UMAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F14D32C8EE11200356C56 /* IABG_Game_UMAUITests.swift */; };
 		C35F14D62C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F14D52C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift */; };
+		C35F14E32C8F086400356C56 /* IABG-Game-UMA-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C35F14E22C8F086400356C56 /* IABG-Game-UMA-Info.plist */; };
+		C35F14E72C8F09D400356C56 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C35F14E62C8F09D400356C56 /* Lottie */; };
+		C35F14E92C8F49EE00356C56 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C35F14E82C8F49EE00356C56 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		C35F14CF2C8EE11200356C56 /* IABG Game UMAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IABG Game UMAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35F14D32C8EE11200356C56 /* IABG_Game_UMAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IABG_Game_UMAUITests.swift; sourceTree = "<group>"; };
 		C35F14D52C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IABG_Game_UMAUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C35F14E22C8F086400356C56 /* IABG-Game-UMA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IABG-Game-UMA-Info.plist"; sourceTree = "<group>"; };
+		C35F14E82C8F49EE00356C56 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35F14E72C8F09D400356C56 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +100,12 @@
 		C35F14B72C8EE11100356C56 /* IABG Game UMA */ = {
 			isa = PBXGroup;
 			children = (
+				C35F14E22C8F086400356C56 /* IABG-Game-UMA-Info.plist */,
 				C35F14B82C8EE11100356C56 /* IABG_Game_UMAApp.swift */,
 				C35F14BA2C8EE11100356C56 /* ContentView.swift */,
 				C35F14BC2C8EE11200356C56 /* Assets.xcassets */,
 				C35F14BE2C8EE11200356C56 /* Preview Content */,
+				C35F14E82C8F49EE00356C56 /* Localizable.xcstrings */,
 			);
 			path = "IABG Game UMA";
 			sourceTree = "<group>";
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = "IABG Game UMA";
+			packageProductDependencies = (
+				C35F14E62C8F09D400356C56 /* Lottie */,
+			);
 			productName = "IABG Game UMA";
 			productReference = C35F14B52C8EE11100356C56 /* IABG Game UMA.app */;
 			productType = "com.apple.product-type.application";
@@ -212,9 +223,13 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				es,
 			);
 			mainGroup = C35F14AC2C8EE11100356C56;
+			packageReferences = (
+				C35F14E42C8F09BD00356C56 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C35F14E52C8F09D400356C56 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+			);
 			productRefGroup = C35F14B62C8EE11100356C56 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,7 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C35F14E32C8F086400356C56 /* IABG-Game-UMA-Info.plist in Resources */,
 				C35F14C02C8EE11200356C56 /* Preview Assets.xcassets in Resources */,
+				C35F14E92C8F49EE00356C56 /* Localizable.xcstrings in Resources */,
 				C35F14BD2C8EE11200356C56 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +605,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C35F14E42C8F09BD00356C56 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.1.0;
+			};
+		};
+		C35F14E52C8F09D400356C56 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C35F14E62C8F09D400356C56 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C35F14E52C8F09D400356C56 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C35F14AD2C8EE11100356C56 /* Project object */;
 }
