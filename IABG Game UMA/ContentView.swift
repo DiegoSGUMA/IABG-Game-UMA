@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var showSplach = true
+    @State private var path: [Constants.NavigationDestination] = []
+    
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            if showSplach {
+                LottieView(name: "SplashGift.json")
+                    .transition(.opacity)
+            } else {
+               //RegisterView(path: $path, loginVM: LoginVM(user: UserModel(userID: "123", userName: "hola", pwd: "", email: "")))
+               // LoginView(path: $path, loginVM: LoginVM(user: UserModel(userID: "123", userName: "hola", pwd: "", email: "")))
+                MainMenuView(mainMenuVM: MainMenuVM(user: InfoUserModel(userName: "", profilePicture: "", ranking: 0, points: 0)))
+            }
         }
-        .padding()
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                withAnimation {
+                    self.showSplach = false
+                }
+            }
+        }
     }
 }
 

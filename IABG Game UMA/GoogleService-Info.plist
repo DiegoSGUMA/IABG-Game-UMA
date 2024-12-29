@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyCUQgnq8MXQV0zrzii5HFrAgcke-EFyzoc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>749637464308</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>dsgUMA.IABG-Game-UMA</string>
+	<key>PROJECT_ID</key>
+	<string>iabg-game</string>
+	<key>STORAGE_BUCKET</key>
+	<string>iabg-game.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:749637464308:ios:08f4fd68659eb0cea0eea1</string>
+</dict>
+</plist>

@@ -1,7 +1,199 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
 
+    },
+    "¡Enhorabuena, has finalizado una partida con éxito!" : {
+
+    },
+    "%@ %@." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@."
+          }
+        }
+      }
+    },
+    "%@: %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@"
+          }
+        }
+      }
+    },
+    "%lld - %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld - %2$lld"
+          }
+        }
+      }
+    },
+    "%lld / %lld" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld / %2$lld"
+          }
+        }
+      }
+    },
+    "%lld xp" : {
+
+    },
+    "%lld%%" : {
+
+    },
+    "%lldº" : {
+
+    },
+    "Aceptar términos y condiciones para todos los datos necesarios de los usuarios." : {
+
+    },
+    "App Info" : {
+
+    },
+    "App Warning" : {
+
+    },
+    "Attention_level" : {
+
+    },
+    "Cambiar imagen" : {
+
+    },
+    "Comenzar partida" : {
+
+    },
+    "Confirm Password" : {
+
+    },
+    "Email" : {
+
+    },
+    "Enter the %@" : {
+
+    },
+    "forgot_ko" : {
+
+    },
+    "forgot_ok" : {
+
+    },
+    "Forgot_password_button" : {
+
+    },
+    "Forgot_Subtitle" : {
+
+    },
+    "generic_error" : {
+
+    },
+    "Go" : {
+
+    },
+    "Hola" : {
+
+    },
+    "Improve" : {
+
+    },
+    "Invalid_field_error" : {
+
+    },
+    "Invalid_request_field" : {
+
+    },
+    "Invalid_same_password" : {
+
+    },
+    "Invalid_username_error" : {
+
+    },
+    "Ir al inicio" : {
+
+    },
+    "Ir al menu principal" : {
+
+    },
+    "Last Games" : {
+
+    },
+    "Log out" : {
+
+    },
+    "Login" : {
+
+    },
+    "OK" : {
+
+    },
+    "Password" : {
+
+    },
+    "Por favor, introduce el número que has encestado de cada elemento en las siguientes casillas." : {
+
+    },
+    "Profile" : {
+
+    },
+    "Recover password" : {
+
+    },
+    "Register" : {
+
+    },
+    "Register_Button" : {
+
+    },
+    "Register_user_ok" : {
+
+    },
+    "RESULTADOS" : {
+
+    },
+    "Save" : {
+
+    },
+    "save_result_success" : {
+
+    },
+    "Selecciona un nivel para comenzar partida" : {
+
+    },
+    "Send_Email" : {
+
+    },
+    "Server_data_error" : {
+
+    },
+    "Server_error_email" : {
+
+    },
+    "Statistics" : {
+
+    },
+    "Total: %lld" : {
+
+    },
+    "UpLevel" : {
+
+    },
+    "Username" : {
+
+    },
+    "Ver resultados" : {
+
+    }
   },
   "version" : "1.0"
 }
