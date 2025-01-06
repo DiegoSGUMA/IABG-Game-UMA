@@ -17,11 +17,11 @@ final class MainMenuVM: ObservableObject {
     @Published var msg = ""
     @Published var navigateToLogin = false
     
-   // private var mainRepository = MainMenuAPI()
+    private var mainRepository = MainMenuAPI()
 
     init(user: InfoUserModel) {
         self.user = user
-    //    self.mainRepository.delegate = self
+        self.mainRepository.delegate = self
     }
     
     func getUser() {
@@ -33,7 +33,7 @@ final class MainMenuVM: ObservableObject {
         
         isLoading = true
         let model = UpdatePassModel(userID: userInfo.userID, pwd: userInfo.pwd)
-      //  mainRepository.getUser(user: model)
+        mainRepository.getUser(user: model)
     }
     
     func showError(error: String) {
@@ -42,11 +42,11 @@ final class MainMenuVM: ObservableObject {
     }
 }
 
-/*extension MainMenuVM: ManuApiDelegate {
+extension MainMenuVM: MainMenuApiDelegate {
 
     func getUserInfoSucces(model: GetUserAllInfoResult) {
         staticticsModel = StatisticsModel(
-            level: levels(rawValue: String(model.statistics.Level_ID)) ?? .easy,
+            level: levels(rawValue: model.statistics.Level_ID) ?? .easy,
             totalAttemps: model.statistics.Total_Attempt,
             totalSucces: model.statistics.Total_Success,
             levelAttemps: model.statistics.Total_Attempt_Level,
@@ -80,5 +80,5 @@ final class MainMenuVM: ObservableObject {
         showError(error: error)
     }
 }
-*/
+
 

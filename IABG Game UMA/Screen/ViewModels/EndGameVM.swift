@@ -22,11 +22,11 @@ final class EndGameVM: ObservableObject {
     var totalPredictions: Int = 0
     var totalRealResult: Int = 0
     
- //   private var resultRepository = EndGameApi()
+    private var resultRepository = EndGameAPI()
     
     init(elements: [EndGameModel]) {
         self.elements = elements
-     //   self.resultRepository.delegate = self
+        self.resultRepository.delegate = self
     }
     
     func getTypes() -> [Int] {
@@ -78,7 +78,7 @@ final class EndGameVM: ObservableObject {
                                         globalPer: Int(percentageGlobal),
                                         totSuccess: totalRealResult,
                                         totPredict: totalPredictions)
-   //     resultRepository.saveResults(results: model)
+        resultRepository.saveResults(results: model)
     }
     
     func bindingForIndex(array: Binding<[Int?]>, index: Int) -> Binding<Int> {
@@ -99,7 +99,7 @@ final class EndGameVM: ObservableObject {
         msg = error
     }
 }
-/*
+
 extension EndGameVM: EndGameApiDelegate {
     func saveResultSucces() {
         showInfo(error: NSLocalizedString("save_result_success", comment: ""))
@@ -109,7 +109,7 @@ extension EndGameVM: EndGameApiDelegate {
         showInfo(error: NSLocalizedString("generic_error", comment: ""))
     }
 }
-*/
+
 private extension Array {
     /// Safe index accessor to avoid out-of-bounds errors.
     subscript(safe index: Int) -> Element? {

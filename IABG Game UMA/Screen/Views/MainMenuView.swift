@@ -16,10 +16,10 @@ struct MainMenuView: View {
     var body: some View {
         NavigationStack(path: $path) {
             ZStack {
-               // if mainMenuVM.isLoading {
-              //      ProgressView()
-            //            .toolbar(.hidden)
-           //     } else {
+                if mainMenuVM.isLoading {
+                    ProgressView()
+                        .toolbar(.hidden)
+                } else {
                     VStack(spacing: 0) {
                         HeaderView()
                         
@@ -48,7 +48,7 @@ struct MainMenuView: View {
                     } message: {
                         Text(mainMenuVM.msg)
                     }
-               // }
+                }
             }
             .onAppear {
                 handleOnAppear()
@@ -205,7 +205,7 @@ extension MainMenuView {
             }
             self.levelSelected = .none
         } else {
-        //    path.append(Constants.NavigationDestination.loginViow)
+            path.append(Constants.NavigationDestination.loginView)
         }
     }
     
@@ -216,7 +216,7 @@ extension MainMenuView {
             RegisterView(path: $path, loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
         case .forgotView:
             ForgotPassView(loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")), path: $path)
-        case .loginViow:
+        case .loginView:
             LoginView(path: $path, loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
         case .statisticsView(let statistic):
             StatisticsView(path: $path, statisticsVM: StatisticsVM(staticticsModel: statistic))

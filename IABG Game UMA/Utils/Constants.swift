@@ -20,7 +20,7 @@ struct Constants {
     }
     
     enum NavigationDestination: Hashable {
-        case loginViow
+        case loginView
         case registerView
         case forgotView
         case statisticsView(statictics: StatisticsModel)

@@ -19,7 +19,7 @@ struct Validations {
     }
 
     static func validatePass(text: String, second: String?) -> String? {
-        let passRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*]).{8,}$"
+        let passRegex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#_$.%^&*]).{8,}$"
         return text.evaluate(regexp: passRegex) ? nil : NSLocalizedString("Invalid_field_error", comment: "")
     }
 

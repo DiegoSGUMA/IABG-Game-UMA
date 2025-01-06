@@ -22,11 +22,11 @@ final class ProfileVM: ObservableObject {
     @Published var logOut = false
     @Published var msg = ""
 
- //   private var mainRepository = MainMenuAPI()
+    private var mainRepository = MainMenuAPI()
 
     init(profileInfo: ProfileModel) {
         self.profileInfo = profileInfo
-   //     self.mainRepository.delegate = self
+        self.mainRepository.delegate = self
     }
 
     // MARK: - Image Handling
@@ -44,7 +44,7 @@ final class ProfileVM: ObservableObject {
 
     // MARK: - Update Logic
 
-  /*  func updateElements(username: String, password: String) {
+    func updateElements(username: String, password: String) {
         guard validateFields(username: username, password: password) else {
             showInfo(message: "Los datos introducidos no son correctos", info: true, logout: false)
             return
@@ -62,9 +62,9 @@ final class ProfileVM: ObservableObject {
         } else {
             updateService(username: username, password: password)
         }
-    }*/
+    }
 
-  /*  private func updateService(username: String, password: String) {
+    private func updateService(username: String, password: String) {
         if !username.isEmpty { profileInfo.userName = username }
         if let image = selectedImage, let imageString = image.imageToUInt8ArrayString() {
             profileInfo.profilePicture = imageString
@@ -73,10 +73,10 @@ final class ProfileVM: ObservableObject {
         guard let userInfo = UserDefaults.getUser() else { return }
         let updatedPassword = password.isEmpty ? userInfo.pwd : password
         let userModel = UserModel(
-            id: profileInfo.userId,
-            email: profileInfo.email,
-            pass: updatedPassword,
-            userName: username.isEmpty ? userInfo.userName : username
+            userID: profileInfo.userId,
+            userName: username.isEmpty ? userInfo.userName : username,
+            pwd: updatedPassword,
+            email: profileInfo.email
         )
         UserDefaults.saveUser(user: userModel)
 
@@ -87,7 +87,7 @@ final class ProfileVM: ObservableObject {
             image: profileInfo.profilePicture ?? ""
         )
         mainRepository.updateProfile(profile: profileRequest)
-    }*/
+    }
 
     // MARK: - Alerts
 
@@ -132,8 +132,8 @@ extension ProfileVM {
 }
 
 // MARK: - MainMenuAPI Delegate
-/*
-extension ProfileVM: ManuApiDelegate {
+
+extension ProfileVM: MainMenuApiDelegate {
     func getUserInfoSucces(model: GetUserAllInfoResult) { }
 
     func getUserInfoError(error: String) { }
@@ -142,10 +142,10 @@ extension ProfileVM: ManuApiDelegate {
         showInfo(message: "Información actualizada correctamente.", info: false, logout: false)
         guard let userInfo = UserDefaults.getUser() else { return }
         let updatedUser = UserModel(
-            id: profileInfo.userId,
-            email: profileInfo.email,
-            pass: userInfo.pass,
-            userName: profileInfo.userName
+            userID: profileInfo.userId,
+            userName: profileInfo.userName,
+            pwd: userInfo.pwd,
+            email: profileInfo.email
         )
         UserDefaults.saveUser(user: updatedUser)
     }
@@ -154,4 +154,4 @@ extension ProfileVM: ManuApiDelegate {
         showInfo(message: error, info: true, logout: false)
     }
 }
-*/
+

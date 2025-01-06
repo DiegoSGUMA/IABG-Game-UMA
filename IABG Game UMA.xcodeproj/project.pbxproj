@@ -31,13 +31,18 @@
 		C35F14CA2C8EE11200356C56 /* IABG_Game_UMATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F14C92C8EE11200356C56 /* IABG_Game_UMATests.swift */; };
 		C35F14D42C8EE11200356C56 /* IABG_Game_UMAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F14D32C8EE11200356C56 /* IABG_Game_UMAUITests.swift */; };
 		C35F14D62C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35F14D52C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift */; };
-		C35F14E32C8F086400356C56 /* IABG-Game-UMA-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C35F14E22C8F086400356C56 /* IABG-Game-UMA-Info.plist */; };
 		C35F14E72C8F09D400356C56 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C35F14E62C8F09D400356C56 /* Lottie */; };
 		C35F14E92C8F49EE00356C56 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C35F14E82C8F49EE00356C56 /* Localizable.xcstrings */; };
 		C369AE6D2D08430100280B45 /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6C2D0842F800280B45 /* HeaderBar.swift */; };
 		C369AE6E2D08430100280B45 /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6C2D0842F800280B45 /* HeaderBar.swift */; };
 		C369AE702D0843FC00280B45 /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6F2D0843F500280B45 /* ToggleStyles.swift */; };
 		C369AE712D0843FC00280B45 /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6F2D0843F500280B45 /* ToggleStyles.swift */; };
+		C38CC1AD2D2B0B5500B75499 /* MainMenuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */; };
+		C38CC1AE2D2B0B5500B75499 /* MainMenuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */; };
+		C38CC1B02D2B0FD600B75499 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */; };
+		C38CC1B12D2B0FD600B75499 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */; };
+		C38CC1B62D2B107200B75499 /* EndGameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */; };
+		C38CC1B72D2B107200B75499 /* EndGameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */; };
 		C3A731972D19C4D200308B98 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731962D19C4CD00308B98 /* MainMenuModel.swift */; };
 		C3A731982D19C4D200308B98 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731962D19C4CD00308B98 /* MainMenuModel.swift */; };
 		C3A7319A2D19CA6700308B98 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731992D19CA6200308B98 /* Avatar.swift */; };
@@ -135,10 +140,12 @@
 		C35F14CF2C8EE11200356C56 /* IABG Game UMAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IABG Game UMAUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C35F14D32C8EE11200356C56 /* IABG_Game_UMAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IABG_Game_UMAUITests.swift; sourceTree = "<group>"; };
 		C35F14D52C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IABG_Game_UMAUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C35F14E22C8F086400356C56 /* IABG-Game-UMA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IABG-Game-UMA-Info.plist"; sourceTree = "<group>"; };
 		C35F14E82C8F49EE00356C56 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C369AE6C2D0842F800280B45 /* HeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBar.swift; sourceTree = "<group>"; };
 		C369AE6F2D0843F500280B45 /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
+		C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuAPI.swift; sourceTree = "<group>"; };
+		C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameAPI.swift; sourceTree = "<group>"; };
 		C3A731962D19C4CD00308B98 /* MainMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
 		C3A731992D19CA6200308B98 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		C3B0EA3F2D205AAA000E2474 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -235,7 +242,6 @@
 				C3B4C3BF2CB5A39E0075B638 /* API */,
 				C3CA18072CB44AFF00A6AF00 /* Utils */,
 				C3C1994D2C91F1DE0059AA26 /* Screen */,
-				C35F14E22C8F086400356C56 /* IABG-Game-UMA-Info.plist */,
 				C3C199442C91E8B00059AA26 /* AppDelegate.swift */,
 				C35F14B82C8EE11100356C56 /* IABG_Game_UMAApp.swift */,
 				C35F14BA2C8EE11100356C56 /* ContentView.swift */,
@@ -276,6 +282,9 @@
 		C3B4C3BF2CB5A39E0075B638 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */,
+				C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */,
+				C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */,
 				C3B4C3C02CB5A3B00075B638 /* LoginAPI.swift */,
 				C3B4C3C32CB5A5A50075B638 /* APIServices.swift */,
 			);
@@ -487,7 +496,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C35F14E32C8F086400356C56 /* IABG-Game-UMA-Info.plist in Resources */,
 				C3DFA7662CDBE31F004F18E2 /* GoogleService-Info.plist in Resources */,
 				C35F14C02C8EE11200356C56 /* Preview Assets.xcassets in Resources */,
 				C35F14E92C8F49EE00356C56 /* Localizable.xcstrings in Resources */,
@@ -528,9 +536,11 @@
 				C35F14BB2C8EE11100356C56 /* ContentView.swift in Sources */,
 				C3CA18132CB451CE00A6AF00 /* TextField.swift in Sources */,
 				C3CA18162CB46D3400A6AF00 /* Validations.swift in Sources */,
+				C38CC1B62D2B107200B75499 /* EndGameAPI.swift in Sources */,
 				C3B0EA442D205C61000E2474 /* StatisticsVM.swift in Sources */,
 				C3B4C3C12CB5A3B00075B638 /* LoginAPI.swift in Sources */,
 				C3C199932C91FC810059AA26 /* LottieVM.swift in Sources */,
+				C38CC1AD2D2B0B5500B75499 /* MainMenuAPI.swift in Sources */,
 				C3B0EA4D2D207076000E2474 /* Image.swift in Sources */,
 				C3A731982D19C4D200308B98 /* MainMenuModel.swift in Sources */,
 				C3B0EA402D205AB7000E2474 /* StatisticsView.swift in Sources */,
@@ -546,6 +556,7 @@
 				C3B4C3C42CB5A5A50075B638 /* APIServices.swift in Sources */,
 				C355464B2D1C6F350035DCCF /* ResultinfoView.swift in Sources */,
 				C3C199802C91F7E80059AA26 /* UserModel.swift in Sources */,
+				C38CC1B02D2B0FD600B75499 /* BaseAPI.swift in Sources */,
 				C3CA180C2CB44E2C00A6AF00 /* LoginVM.swift in Sources */,
 				C3BDAB322CB6EC3100A2F752 /* String+Additions.swift in Sources */,
 				C3B0EA472D206399000E2474 /* ProfileView.swift in Sources */,
@@ -570,6 +581,7 @@
 				C3BD48852D186C0000EFA9DF /* ForgotPassView.swift in Sources */,
 				C3C199462C91E8CC0059AA26 /* AppDelegate.swift in Sources */,
 				C3CA180D2CB44E2C00A6AF00 /* LoginVM.swift in Sources */,
+				C38CC1B12D2B0FD600B75499 /* BaseAPI.swift in Sources */,
 				C3B0EA412D205AB7000E2474 /* StatisticsView.swift in Sources */,
 				C3B4C3C22CB5A3B00075B638 /* LoginAPI.swift in Sources */,
 				C3C1998D2C91F89A0059AA26 /* SplashView.swift in Sources */,
@@ -588,11 +600,13 @@
 				C3C199502C91F2110059AA26 /* LevelModel.swift in Sources */,
 				C3CA180A2CB44B1200A6AF00 /* Constants.swift in Sources */,
 				C35546472D1C6D0F0035DCCF /* GridResult.swift in Sources */,
+				C38CC1AE2D2B0B5500B75499 /* MainMenuAPI.swift in Sources */,
 				C3C199812C91F7E80059AA26 /* UserModel.swift in Sources */,
 				C355463B2D1C2DBE0035DCCF /* GameScene.swift in Sources */,
 				C3C199942C91FC810059AA26 /* LottieVM.swift in Sources */,
 				C35F14CA2C8EE11200356C56 /* IABG_Game_UMATests.swift in Sources */,
 				C3B0EA432D205C61000E2474 /* StatisticsVM.swift in Sources */,
+				C38CC1B72D2B107200B75499 /* EndGameAPI.swift in Sources */,
 				C355464E2D1C73CA0035DCCF /* EndGameVM.swift in Sources */,
 				C3CA18172CB46D3400A6AF00 /* Validations.swift in Sources */,
 				C369AE712D0843FC00280B45 /* ToggleStyles.swift in Sources */,
@@ -756,6 +770,7 @@
 				DEVELOPMENT_TEAM = PJWZUAKUU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IABG-Game-UMA-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -785,6 +800,7 @@
 				DEVELOPMENT_TEAM = PJWZUAKUU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IABG-Game-UMA-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

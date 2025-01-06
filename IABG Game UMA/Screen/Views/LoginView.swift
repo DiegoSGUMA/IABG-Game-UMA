@@ -117,5 +117,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(path: .constant([Constants.NavigationDestination.loginViow]), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
+    LoginView(path: .constant([Constants.NavigationDestination.loginView]), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
 }

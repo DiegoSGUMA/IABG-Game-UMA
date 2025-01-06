@@ -144,7 +144,7 @@ struct ProfileView: View {
             if !profileVM.infoOnly, !profileVM.logOut {
                 path.removeAll()
             } else if profileVM.logOut {
-                path.append(Constants.NavigationDestination.loginViow)
+                path.append(Constants.NavigationDestination.loginView)
             }
         } label: {
             Text(profileVM.infoOnly ? "OK" : "Ir al menu principal")

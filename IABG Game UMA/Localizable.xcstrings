@@ -7,6 +7,9 @@
     "¡Enhorabuena, has finalizado una partida con éxito!" : {
 
     },
+    "%.0f %%" : {
+
+    },
     "%@ %@." : {
       "localizations" : {
         "en" : {
@@ -143,6 +146,9 @@
     "Por favor, introduce el número que has encestado de cada elemento en las siguientes casillas." : {
 
     },
+    "Process_data_error" : {
+
+    },
     "Profile" : {
 
     },
@@ -189,6 +195,9 @@
 
     },
     "Username" : {
+
+    },
+    "UserName_Exist" : {
 
     },
     "Ver resultados" : {

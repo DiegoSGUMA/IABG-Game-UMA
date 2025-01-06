@@ -38,11 +38,52 @@ struct ProfileModel: Codable, Hashable {
     var percentajeLevel: Double
 }
 
+// MARK: - Modelos para los servicios de MainView
+
+struct GetUserAllInfoResult: Codable, Hashable {
+    let userInfo: User
+    let statistics: StatisticsGame
+}
+
+struct User:  Codable, Hashable {
+    var User_ID: String
+    var Email: String
+    var Password: String
+    var User_Name: String
+    var Profile_Picture: String
+    var Pass_Count: Int
+    var Level_Percentage : Int
+}
+
+struct StatisticsGame: Codable, Hashable {
+    var Statistics_ID: Int
+    var User_ID: String
+    var Level: Int
+    var Total_Attempt: Int
+    var Total_Success: Int
+    var Ranking: Int
+    var Points: Int
+    var Percentage_Succes: Int
+    var Percentage_Agility: Int
+    var Last_Plays: [Int]
+    var Level_ID: Int
+    var Total_Attempt_Level: Int
+    var Total_Success_Level: Int
+}
+
+struct updateProfileRequest: Codable {
+    var userName: String
+    var pwd: String
+    var email: String
+    var image: String
+}
+
+
 
 // MARK: - Modelos por Defecto
 
 extension StatisticsModel {
-    /// Proporciona una instancia por defecto para inicializaciones rápidas.
+
     static let `default` = StatisticsModel(
         level: .easy,
         totalAttemps: 0,
@@ -58,7 +99,7 @@ extension StatisticsModel {
 }
 
 extension ProfileModel {
-    /// Proporciona una instancia por defecto para inicializaciones rápidas.
+
     static let `default` = ProfileModel(
         userId: "",
         userName: "Usuario",

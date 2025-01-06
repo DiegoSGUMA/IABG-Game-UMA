@@ -135,7 +135,7 @@ extension LoginVM: LoginApiDelegate {
             try Auth.auth().signOut()
             showError(error: error)
         } catch let signOutError as NSError {
-            showError(error: error)
+            showError(error: signOutError.localizedDescription)
         }
     }
     

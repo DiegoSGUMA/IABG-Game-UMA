@@ -82,16 +82,16 @@ class APIServices {
         xml += "</\(serviceName)>"
         return xml
     }
-/*
+
     func parseXMLToModel(xml: String, model: GetUserAllInfoResult.Type) -> GetUserAllInfoResult? {
         let parser = XMLModelParser()
         return parser.parse(xml: xml)
-    }*/
+    }
 }
 
 
 
-/*class XMLModelParser: NSObject, XMLParserDelegate {
+class XMLModelParser: NSObject, XMLParserDelegate {
     var currentElement = ""
     var tempValue = ""
     
@@ -193,4 +193,4 @@ class APIServices {
             break
         }
     }
-}*/
+}
