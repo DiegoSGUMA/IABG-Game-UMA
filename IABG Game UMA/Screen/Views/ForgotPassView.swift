@@ -13,6 +13,7 @@ struct ForgotPassView: View {
     @State private var resetPasswordToggle: Bool = false
     @State private var alertMessage: String = ""
     @Binding var path: [Constants.NavigationDestination]
+    @State private var check = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -52,9 +53,11 @@ struct ForgotPassView: View {
                 secondPass: $loginVM.secondPass,
                 validation: Validations.validateEmail,
                 isPassword: false,
-                isEmail: true
+                isEmail: true,
+                check: $check
             )
             .keyboardType(.emailAddress)
+            .textInputAutocapitalization(.never)
         }
         .background(Color("SecondBlue"))
         .scrollContentBackground(.hidden)

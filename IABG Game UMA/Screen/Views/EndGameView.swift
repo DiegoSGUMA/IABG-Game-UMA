@@ -53,7 +53,6 @@ struct EndGameView: View {
             Button {
                 if endGameVM.comprobe {
                     endGameVM.saveResults()
-                    path.removeAll()
                 } else {
                     endGameVM.comprobe.toggle()
                     endGameVM.save()

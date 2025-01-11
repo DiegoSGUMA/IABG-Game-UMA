@@ -11,9 +11,11 @@ import Firebase
 struct LoginView: View {
     
     @Binding var path: [Constants.NavigationDestination]
+    @Binding var resetID: UUID
     @ObservedObject var loginVM: LoginVM
     @State private var email = ""
     @State private var pass = ""
+    @State private var check = false
 
     var body: some View {
         VStack {
@@ -46,8 +48,9 @@ struct LoginView: View {
     }
     
     private func clearPathAfterDelay() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             path.removeAll()
+            resetID = UUID()
         }
     }
 
@@ -65,8 +68,10 @@ struct LoginView: View {
             secondPass: $email,
             validation: Validations.validateEmail,
             isPassword: false,
-            isEmail: true
+            isEmail: true,
+            check: $check
         )
+        .textInputAutocapitalization(.never)
         .keyboardType(.emailAddress)
     }
 
@@ -76,7 +81,8 @@ struct LoginView: View {
             text: $pass,
             secondPass: $pass,
             validation: Validations.validatePass,
-            isPassword: true
+            isPassword: true,
+            check: $check
         )
         .textContentType(.password)
         .keyboardType(.default)
@@ -95,6 +101,7 @@ struct LoginView: View {
 
     private var loginButton: some View {
         Button("Login") {
+            self.check = true
             handleLogin()
         }
         .buttonStyle(SecondaryButton())
@@ -117,5 +124,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(path: .constant([Constants.NavigationDestination.loginView]), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
+    LoginView(path: .constant([Constants.NavigationDestination.loginView]), resetID: .constant(UUID()), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
 }

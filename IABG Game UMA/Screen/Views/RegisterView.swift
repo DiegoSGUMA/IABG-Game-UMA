@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @Binding var path: [Constants.NavigationDestination]
+    @State private var check = true
     @FocusState var field: Fields?
     @ObservedObject var loginVM: LoginVM
 
@@ -32,11 +33,13 @@ struct RegisterView: View {
                             text: $loginVM.userName,
                             secondPass: $loginVM.secondPass,
                             validation: Validations.validateUsername,
-                            isPassword: false
+                            isPassword: false,
+                            check: $check
                         )
                         .textContentType(.username)
                         .focused($field, equals: .username)
                         .submitLabel(.next)
+                        .textInputAutocapitalization(.characters)
                         .onSubmit { field?.next() }
 
                         FieldText(
@@ -44,11 +47,12 @@ struct RegisterView: View {
                             text: $loginVM.email,
                             secondPass: $loginVM.secondPass,
                             validation: Validations.validateEmail,
-                            isPassword: false
+                            isPassword: false,
+                            check: $check
                         )
-                        .textContentType(.emailAddress)
                         .focused($field, equals: .email)
                         .submitLabel(.next)
+                        .textInputAutocapitalization(.never)
                         .onSubmit { field?.next() }
                     }
 
@@ -58,7 +62,8 @@ struct RegisterView: View {
                             text: $loginVM.pass,
                             secondPass: $loginVM.secondPass,
                             validation: Validations.validatePass,
-                            isPassword: true
+                            isPassword: true,
+                            check: $check
                         )
                         .focused($field, equals: .pass)
                         .submitLabel(.next)
@@ -69,7 +74,8 @@ struct RegisterView: View {
                             text: $loginVM.secondPass,
                             secondPass: $loginVM.pass,
                             validation: Validations.validateEqualPass,
-                            isPassword: true
+                            isPassword: true,
+                            check: $check
                         )
                         .focused($field, equals: .secondpass)
                         .submitLabel(.next)

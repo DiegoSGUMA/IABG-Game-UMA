@@ -10,6 +10,7 @@ import FirebaseAuth
 
 struct MainMenuView: View {
     @State private var path: [Constants.NavigationDestination] = []
+    @State private var resetID = UUID()
     @ObservedObject var mainMenuVM: MainMenuVM
     @State private var levelSelected: levels = .none
     
@@ -51,8 +52,10 @@ struct MainMenuView: View {
                 }
             }
             .onAppear {
+                print("Entro en el main")
                 handleOnAppear()
             }
+            .id(resetID)
             .navigationDestination(for: Constants.NavigationDestination.self) { destination in
                 navigationDestinationView(for: destination)
             }
@@ -200,7 +203,9 @@ struct StartGameButton: View {
 extension MainMenuView {
     func handleOnAppear() {
         if let userInfo = UserDefaults.getUser(), Auth.auth().currentUser != nil {
-            DispatchQueue.global().async {
+            
+            mainMenuVM.isLoading = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.mainMenuVM.getUser()
             }
             self.levelSelected = .none
@@ -217,7 +222,7 @@ extension MainMenuView {
         case .forgotView:
             ForgotPassView(loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")), path: $path)
         case .loginView:
-            LoginView(path: $path, loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
+            LoginView(path: $path, resetID: $resetID, loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
         case .statisticsView(let statistic):
             StatisticsView(path: $path, statisticsVM: StatisticsVM(staticticsModel: statistic))
         case .profileView(let profile):

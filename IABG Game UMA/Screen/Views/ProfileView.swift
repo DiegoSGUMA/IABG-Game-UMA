@@ -16,6 +16,7 @@ struct ProfileView: View {
     @State private var pass = ""
     @State private var changePassword = false
     @State private var changeUsername = false
+    @State private var check = true
 
     var body: some View {
         if profileVM.isLoading {
@@ -105,7 +106,7 @@ struct ProfileView: View {
     private var actionButtons: some View {
         VStack {
             Button {
-               // profileVM.updateElements(username: userName, password: pass)
+               profileVM.updateElements(username: userName, password: pass)
             } label: {
                 Text("Save")
             }
@@ -114,7 +115,7 @@ struct ProfileView: View {
             .padding(16)
 
             Button {
-             //   profileVM.singOut()
+                profileVM.signOut()
             } label: {
                 Text("Log out")
             }
@@ -174,7 +175,8 @@ struct ProfileView: View {
                           text: textFieldBinding,
                           secondPass: textFieldBinding,
                           validation: validation,
-                          isPassword: isSecure)
+                          isPassword: isSecure,
+                          check: $check)
                 .textContentType(isSecure ? .password : .username)
                 .autocorrectionDisabled()
                 .textInputAutocapitalization(isSecure ? .never : .characters)

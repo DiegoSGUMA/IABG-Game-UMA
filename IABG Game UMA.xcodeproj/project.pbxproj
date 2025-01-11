@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		C30ABC612CEE45C100E2A50C /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ABC602CEE45C100E2A50C /* RegisterView.swift */; };
+		C312D39E2D2C682F0057F354 /* IABG-Game-UMA-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C312D39C2D2C656F0057F354 /* IABG-Game-UMA-Info.plist */; };
+		C312D39F2D2C682F0057F354 /* IABG-Game-UMA-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C312D39C2D2C656F0057F354 /* IABG-Game-UMA-Info.plist */; };
+		C34E49372D307E9F00DFF544 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E49362D307E9B00DFF544 /* Alert.swift */; };
+		C34E49382D307E9F00DFF544 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E49362D307E9B00DFF544 /* Alert.swift */; };
 		C35546372D1C2A4D0035DCCF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35546362D1C2A490035DCCF /* GameView.swift */; };
 		C35546382D1C2A4D0035DCCF /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35546362D1C2A490035DCCF /* GameView.swift */; };
 		C355463B2D1C2DBE0035DCCF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C355463A2D1C2DB90035DCCF /* GameScene.swift */; };
@@ -122,6 +126,8 @@
 
 /* Begin PBXFileReference section */
 		C30ABC602CEE45C100E2A50C /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		C312D39C2D2C656F0057F354 /* IABG-Game-UMA-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IABG-Game-UMA-Info.plist"; sourceTree = "<group>"; };
+		C34E49362D307E9B00DFF544 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C35546362D1C2A490035DCCF /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		C355463A2D1C2DB90035DCCF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		C355463D2D1C2F2E0035DCCF /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
@@ -238,6 +244,7 @@
 		C35F14B72C8EE11100356C56 /* IABG Game UMA */ = {
 			isa = PBXGroup;
 			children = (
+				C312D39C2D2C656F0057F354 /* IABG-Game-UMA-Info.plist */,
 				C3DFA7652CDBE31F004F18E2 /* GoogleService-Info.plist */,
 				C3B4C3BF2CB5A39E0075B638 /* API */,
 				C3CA18072CB44AFF00A6AF00 /* Utils */,
@@ -365,6 +372,7 @@
 		C3CA18112CB451B700A6AF00 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C34E49362D307E9B00DFF544 /* Alert.swift */,
 				C3B0EA4B2D207074000E2474 /* Image.swift */,
 				C35546462D1C6D0B0035DCCF /* GridResult.swift */,
 				C35546402D1C2F770035DCCF /* Random.swift */,
@@ -499,6 +507,7 @@
 				C3DFA7662CDBE31F004F18E2 /* GoogleService-Info.plist in Resources */,
 				C35F14C02C8EE11200356C56 /* Preview Assets.xcassets in Resources */,
 				C35F14E92C8F49EE00356C56 /* Localizable.xcstrings in Resources */,
+				C312D39E2D2C682F0057F354 /* IABG-Game-UMA-Info.plist in Resources */,
 				C3C199902C91FC2B0059AA26 /* SplashGift.json in Resources */,
 				C35F14BD2C8EE11200356C56 /* Assets.xcassets in Resources */,
 			);
@@ -509,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C199912C91FC2B0059AA26 /* SplashGift.json in Resources */,
+				C312D39F2D2C682F0057F354 /* IABG-Game-UMA-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +542,7 @@
 				C355463C2D1C2DBE0035DCCF /* GameScene.swift in Sources */,
 				C35546452D1C3E0B0035DCCF /* EndGameView.swift in Sources */,
 				C3CA180F2CB4519300A6AF00 /* Buttons.swift in Sources */,
+				C34E49382D307E9F00DFF544 /* Alert.swift in Sources */,
 				C355463F2D1C2F340035DCCF /* GameModel.swift in Sources */,
 				C35F14BB2C8EE11100356C56 /* ContentView.swift in Sources */,
 				C3CA18132CB451CE00A6AF00 /* TextField.swift in Sources */,
@@ -592,6 +603,7 @@
 				C3B0EA4C2D207076000E2474 /* Image.swift in Sources */,
 				C3CA18102CB4519300A6AF00 /* Buttons.swift in Sources */,
 				C3A731972D19C4D200308B98 /* MainMenuModel.swift in Sources */,
+				C34E49372D307E9F00DFF544 /* Alert.swift in Sources */,
 				C3B0EA4A2D206DD5000E2474 /* ProfileVM.swift in Sources */,
 				C3C1998A2C91F8900059AA26 /* LoginView.swift in Sources */,
 				C35546372D1C2A4D0035DCCF /* GameView.swift in Sources */,
@@ -770,7 +782,7 @@
 				DEVELOPMENT_TEAM = PJWZUAKUU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "IABG-Game-UMA-Info.plist";
+				INFOPLIST_FILE = "/Users/diegosanchez/Documents/ESTUDIOS/PROYECTO TFG/2024/IABG Game UMA/IABG Game UMA/IABG-Game-UMA-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -800,7 +812,7 @@
 				DEVELOPMENT_TEAM = PJWZUAKUU6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "IABG-Game-UMA-Info.plist";
+				INFOPLIST_FILE = "/Users/diegosanchez/Documents/ESTUDIOS/PROYECTO TFG/2024/IABG Game UMA/IABG Game UMA/IABG-Game-UMA-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

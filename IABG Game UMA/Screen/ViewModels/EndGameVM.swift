@@ -47,16 +47,23 @@ final class EndGameVM: ObservableObject {
     func calculateAccert() {
         var totalAccert: Double = 0
         var totalCollected: Double = 0
+        var comprobacion: Double = 0
         
         elements.forEach { element in
-            let corrector = min(element.posibleResult, element.realResult)
-            let prediction = element.realResult > 0 ? Double(corrector) / Double(element.realResult) : 0
+            let diference = abs(element.realResult - element.posibleResult)
+            if diference == 0 {
+                comprobacion = Double(element.realResult)
+            } else  {
+                comprobacion = diference >= element.realResult ? 0 : Double(element.realResult - diference)
+            }
+            
+            let prediction = element.realResult > 0 ? comprobacion / Double(element.realResult) : 0
             let collected = Double(element.realResult) / Double(element.totalElements)
             
             totalAccert += prediction
             totalCollected += collected
             totalRealResult += element.realResult
-            totalPredictions += corrector
+            totalPredictions += diference
         }
         
         let count = Double(elements.count)

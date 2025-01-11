@@ -20,6 +20,8 @@ struct FieldText: View {
     @State private var errorMsg = ""
     @State private var showPass = false
     @State var isEmail = false
+    @Binding var check: Bool
+    
     
     var body: some View {
         VStack(alignment: .leading, spacing: 5) {
@@ -38,7 +40,7 @@ struct FieldText: View {
             .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color(white: 0.97)))
             .overlay(validationOverlay)
             
-            if error {
+            if error, check {
                 Text("\(label) \(errorMsg).")
                     .font(.caption2)
                     .foregroundStyle(.red)
@@ -56,8 +58,10 @@ struct FieldText: View {
         Group {
             if showPass {
                 TextField("Enter the \(label)", text: $text)
+                    .textInputAutocapitalization(.never)
             } else {
                 SecureField("Enter the \(label)", text: $text)
+                    .textInputAutocapitalization(.never)
             }
         }
         Button {
@@ -94,7 +98,7 @@ struct FieldText: View {
     private var validationOverlay: some View {
         RoundedRectangle(cornerRadius: 10, style: .continuous)
             .stroke(lineWidth: 2)
-            .fill(error ? Color.red : Color.clear)
+            .fill((error && check) ? Color.red : Color.clear)
     }
     
     // MARK: - Methods
