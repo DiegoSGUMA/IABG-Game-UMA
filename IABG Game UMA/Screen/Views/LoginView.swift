@@ -18,32 +18,40 @@ struct LoginView: View {
     @State private var check = false
 
     var body: some View {
-        VStack {
-            logoView()
-                .padding(50)
+        ZStack {
             
-            Spacer()
-            
-            VStack(spacing: 16) {
-                emailField
-                passwordField
-                
-                forgotPasswordButton
-                
-                Spacer()
-                
-                loginButton
-                registerButton
+            if loginVM.isLoading {
+                ProgressView()
+                    .toolbar(.hidden)
+            } else {
+                VStack {
+                    logoView()
+                        .padding(50)
+                    
+                    Spacer()
+                    
+                    VStack(spacing: 16) {
+                        emailField
+                        passwordField
+                        
+                        forgotPasswordButton
+                        
+                        Spacer()
+                        
+                        loginButton
+                        registerButton
+                    }
+                    .padding(.horizontal, 16)
+                }
+                .toolbar(.hidden)
+                .onReceive(loginVM.eventPublisher) { event in
+                    clearPathAfterDelay()
+                }
+                .alert("App Warning", isPresented: $loginVM.showAlert) {
+                } message: {
+                    Text(loginVM.msg)
+                }
             }
-            .padding(.horizontal, 16)
-        }
-        .toolbar(.hidden)
-        .onReceive(loginVM.eventPublisher) { event in
-            clearPathAfterDelay()
-        }
-        .alert("App Warning", isPresented: $loginVM.showAlert) {
-        } message: {
-            Text(loginVM.msg)
         }
     }
     

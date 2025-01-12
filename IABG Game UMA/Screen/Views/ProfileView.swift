@@ -77,11 +77,11 @@ struct ProfileView: View {
     }
 
     private var profileDetailsSection: some View {
-        //ARREGlar la validación
+
         VStack(alignment: .leading) {
             detailRow(label: "Email", value: profileVM.profileInfo.email)
             editableFieldRow(
-                label: "Password",
+                label: NSLocalizedString("Password", comment: ""),
                 isEditing: $changePassword,
                 currentValue: profileVM.profileInfo.passwordCount == 0
                     ? "***********"
@@ -91,7 +91,7 @@ struct ProfileView: View {
                 isSecure: true
             )
             editableFieldRow(
-                label: "Username",
+                label: NSLocalizedString("Username", comment: ""),
                 isEditing: $changeUsername,
                 currentValue: profileVM.profileInfo.userName,
                 textFieldBinding: $userName,

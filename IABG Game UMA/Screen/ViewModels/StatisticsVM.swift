@@ -9,6 +9,8 @@ import SwiftUI
 
 final class StatisticsVM: ObservableObject {
     @Published var staticticsModel: StatisticsModel
+    @Published var pdfURL: URL?
+    @Published var showShareSheet = false
 
     init(staticticsModel: StatisticsModel) {
         self.staticticsModel = staticticsModel
@@ -17,11 +19,11 @@ final class StatisticsVM: ObservableObject {
     var levelText: Text {
         switch staticticsModel.level {
         case .easy, .none:
-            return createText("Easy", color: Color("LowLevel"))
+            return createText(NSLocalizedString("Easy", comment: ""), color: Color("LowLevel"))
         case .medium:
-            return createText("Medium", color: Color("MediumLevel"))
+            return createText(NSLocalizedString("Medium", comment: ""), color: Color("MediumLevel"))
         case .dificult:
-            return createText("Hard", color: Color("HardLevel"))
+            return createText(NSLocalizedString("Hard", comment: ""), color: Color("HardLevel"))
         }
     }
 
@@ -59,5 +61,12 @@ final class StatisticsVM: ObservableObject {
     
     private func createText(_ text: String, color: Color) -> Text {
         Text(text).foregroundStyle(color)
+    }
+    
+    func exportStatistics() {
+        if let url = createCustomPDF(statistic: staticticsModel, recomendation: suggestionText) {
+            pdfURL = url
+            showShareSheet = true
+        }
     }
 }

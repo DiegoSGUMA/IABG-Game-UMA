@@ -19,8 +19,6 @@ struct ContentView: View {
                 LottieView(name: "SplashGift.json")
                     .transition(.opacity)
             } else {
-               //RegisterView(path: $path, loginVM: LoginVM(user: UserModel(userID: "123", userName: "hola", pwd: "", email: "")))
-               // LoginView(path: $path, loginVM: LoginVM(user: UserModel(userID: "123", userName: "hola", pwd: "", email: "")))
                 MainMenuView(mainMenuVM: MainMenuVM(user: InfoUserModel(userName: "", profilePicture: "", ranking: 0, points: 0)))
             }
         }

@@ -20,14 +20,13 @@ struct RegisterView: View {
                 .toolbar(.hidden)
         } else {
             VStack(spacing: 0) {
-                Text("Hola")
                 HeaderBar(title: NSLocalizedString("Register", comment: "")) {
                     path.removeLast()
                 }
                 
 
                Form {
-                    FormSection(header: "Personal_Detail") {
+                    FormSection(header: NSLocalizedString("Personal_Detail", comment: "")) {
                         FieldText(
                             label: NSLocalizedString("Username", comment: ""),
                             text: $loginVM.userName,
@@ -82,7 +81,7 @@ struct RegisterView: View {
                         .onSubmit { field?.next() }
                     }
 
-                    FormSection(header: "Conditions") {
+                    FormSection(header: NSLocalizedString("Conditions", comment: "")) {
                         Toggle(isOn: $loginVM.gprdConditions) {
                             Text("Aceptar términos y condiciones para todos los datos necesarios de los usuarios.")
                         }
@@ -106,10 +105,6 @@ struct RegisterView: View {
                 }
             } message: {
                 Text(loginVM.msg)
-            }
-            .onAppear()
-            {
-                print("Holaaa")
             }
         }
     }

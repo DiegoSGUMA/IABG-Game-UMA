@@ -21,6 +21,7 @@ final class LoginVM: ObservableObject {
     @Published var loginToggle = false
     @Published var isLoading = false
     @Published var navigateToLogin = false
+    @Published var pdfURL: URL?
     
     let eventPublisher = PassthroughSubject<Bool, Never>()
     private let errorData = NSLocalizedString("Server_data_error", comment: "")
@@ -35,12 +36,14 @@ final class LoginVM: ObservableObject {
     // MARK: - Login & Register Functions
     
     func login(email: String, password: String) {
+        isLoading = true
         let formattedEmail = email.lowercased()
         Auth.auth().signIn(withEmail: formattedEmail, password: password) { result, error in
             if let user = result?.user {
                 let userModel = UserModel(userID: user.uid, userName: "", pwd: password, email: formattedEmail)
                 self.userRepository.updatePass(model: userModel)
             } else {
+                self.isLoading = false
                 self.showError(error: self.errorData)
             }
         }
@@ -126,7 +129,8 @@ final class LoginVM: ObservableObject {
 extension LoginVM: LoginApiDelegate {
     
     func updatePassSuccess() {
-        // el login toggle creo que no sirve pars nada
+        
+        isLoading = false
         loginToggle.toggle()
         eventPublisher.send(true)
     }
@@ -134,8 +138,11 @@ extension LoginVM: LoginApiDelegate {
     func updatePassError(error: String) {
         do {
             try Auth.auth().signOut()
+            isLoading = false
             showError(error: error)
+            
         } catch let signOutError as NSError {
+            isLoading = false
             showError(error: signOutError.localizedDescription)
         }
     }

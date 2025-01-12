@@ -12,12 +12,12 @@ struct ResultInfoView: View {
         VStack(alignment: .leading, spacing: 20) {
             Spacer()
             
-            infoText("**Total** = Total de elementos en la partida")
-            infoText("**3 - 5** = **3** (Predicción introducida por el jugador) y **5** (Elementos reales que ha cogido en la partida)")
+            infoText(NSLocalizedString("**Total** = Total de elementos en la partida", comment: ""))
+            infoText(NSLocalizedString("**3 - 5** = **3** (Predicción introducida por el jugador) y **5** (Elementos reales que ha cogido en la partida)", comment: ""))
 
-            predictionLegend(color: Color("LowLevel"), description: "Predicción no acertada y no has cogido todos los elementos en la partida")
-            predictionLegend(color: Color("MediumLevel"), description: "Predicción acertada y no has cogido todos los elementos en la partida")
-            predictionLegend(color: Color("HardLevel"), description: "Predicción acertada y has cogido todos los elementos en la partida")
+            predictionLegend(color: Color("LowLevel"), description: NSLocalizedString("Predicción no acertada y no has cogido todos los elementos en la partida", comment: ""))
+            predictionLegend(color: Color("MediumLevel"), description: NSLocalizedString("Predicción acertada y no has cogido todos los elementos en la partida", comment: ""))
+            predictionLegend(color: Color("HardLevel"), description: NSLocalizedString("Predicción acertada y has cogido todos los elementos en la partida", comment: ""))
             
             Spacer()
         }

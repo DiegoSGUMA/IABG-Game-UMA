@@ -116,7 +116,7 @@ struct StatisticsAndRankingButtons: View {
             Button {
                 path.append(.statisticsView(statictics: mainMenuVM.staticticsModel))
             } label: {
-                StatButtonContent(icon: "chart.line.uptrend.xyaxis", label: "Statistics")
+                StatButtonContent(icon: "chart.line.uptrend.xyaxis", label: NSLocalizedString("Statistics", comment: ""), isImage: true)
             }
             
             Spacer()
@@ -124,7 +124,7 @@ struct StatisticsAndRankingButtons: View {
             Button {
                 mainMenuVM.getUser()
             } label: {
-                StatButtonContent(icon: "\(mainMenuVM.staticticsModel.ranking)º", label: "Ranking")
+                StatButtonContent(icon: "\(mainMenuVM.staticticsModel.ranking)º", label: "Ranking", isImage: false)
             }
         }
     }
@@ -133,15 +133,26 @@ struct StatisticsAndRankingButtons: View {
 struct StatButtonContent: View {
     let icon: String
     let label: String
+    let isImage: Bool
     
     var body: some View {
         VStack {
-            Text(icon)
-                .padding()
-                .frame(width: 80, height: 50)
-                .background(Color("SecondGreen"))
-                .foregroundColor(.black)
-                .cornerRadius(8)
+            if isImage {
+                Image(systemName: icon)
+                    .frame(width: 80, height: 50)
+                    .background(Color("SecondGreen"))
+                    .foregroundColor(.black)
+                    .clipShape(Rectangle())
+                    .cornerRadius(8)
+            } else {
+                Text(icon)
+                    .padding()
+                    .frame(width: 80, height: 50)
+                    .background(Color("SecondGreen"))
+                    .foregroundColor(.black)
+                    .cornerRadius(8)
+            }
+
             Text(label)
                 .fontWeight(.semibold)
                 .font(.system(size: 15))
@@ -202,7 +213,7 @@ struct StartGameButton: View {
 
 extension MainMenuView {
     func handleOnAppear() {
-        if let userInfo = UserDefaults.getUser(), Auth.auth().currentUser != nil {
+        if UserDefaults.getUser() != nil, Auth.auth().currentUser != nil {
             
             mainMenuVM.isLoading = true
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {

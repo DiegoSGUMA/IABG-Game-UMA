@@ -17,11 +17,11 @@ enum levels: Int {
 func getLevelName(_ level: levels) -> String {
     switch level {
     case .easy:
-        return "Easy"
+        return NSLocalizedString("Easy", comment: "")
     case .medium:
-        return "Medium"
+        return NSLocalizedString("Medium", comment: "")
     case .dificult:
-        return "Dificult"
+        return NSLocalizedString("Hard", comment: "")
     case .none:
         return "None"
     }

@@ -44,7 +44,7 @@ struct GridResultView: View {
     private var checkedResultView: some View {
         VStack(alignment: .leading) {
             Text("\(result ?? 0) - \(element.realResult)")
-            Text("Total: \(element.totalElements)")
+            Text("**Total:** \(element.totalElements)")
         }
         .font(.body)
     }

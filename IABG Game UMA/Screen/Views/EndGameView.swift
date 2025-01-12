@@ -26,9 +26,9 @@ struct EndGameView: View {
                 .padding(.bottom, 15)
             } else {
                 VStack(spacing: 10) {
-                    resultText(title: "Porcentaje de aciertos en predicciones", value: endGameVM.percentajeAccert)
-                    resultText(title: "Porcentaje de aciertos en agilidad", value: endGameVM.percentajeCapture)
-                    resultText(title: "Puntuación de la partida", value: endGameVM.percentageGlobal, isLarge: true)
+                    resultText(title: NSLocalizedString("Porcentaje de aciertos en predicciones", comment: "") , value: endGameVM.percentajeAccert)
+                    resultText(title: NSLocalizedString( "Porcentaje de aciertos en agilidad", comment: ""), value: endGameVM.percentajeCapture)
+                    resultText(title: NSLocalizedString("Puntuación de la partida", comment: ""), value: endGameVM.percentageGlobal, isLarge: true)
                 }
             }
             

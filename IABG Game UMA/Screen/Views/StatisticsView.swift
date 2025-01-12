@@ -18,22 +18,22 @@ struct StatisticsView: View {
                 path.removeAll()
             }
             Form {
-                statisticsSection(title: "Your level:", content: {
+                statisticsSection(title: NSLocalizedString("Your level:", comment: "") , content: {
                     statisticsRow(leftText: statisticsVM.levelText.bold(),
                                   rightText: statisticsVM.levelMessage)
                 })
                 
-                statisticsSection(title: "Your Ranking", subtitle: "Total experience") {
+                statisticsSection(title: NSLocalizedString("Your Ranking", comment: ""), subtitle:NSLocalizedString("Total experience", comment: "")) {
                     statisticsRow(leftText: Text("\(statisticsVM.staticticsModel.ranking)º"),
                                   rightText: Text("\(statisticsVM.staticticsModel.points) xp"))
                 }
                 
-                statisticsSection(title: "Hits on level", subtitle: "Total hits") {
+                statisticsSection(title: NSLocalizedString("Hits on level", comment: ""), subtitle:NSLocalizedString("Total hits", comment: "")) {
                     statisticsRow(leftText: Text("\(statisticsVM.staticticsModel.levelAttemps) / \(statisticsVM.staticticsModel.levelSuccess)"),
                                   rightText: Text("\(statisticsVM.staticticsModel.totalAttemps) / \(statisticsVM.staticticsModel.totalSucces)"))
                 }
                 
-                statisticsSection(title: "% of Accert", subtitle: "% of Agility") {
+                statisticsSection(title: NSLocalizedString("% of Accert", comment: ""), subtitle:NSLocalizedString("% of Agility", comment: "")) {
                     statisticsRow(leftText: Text("\(statisticsVM.staticticsModel.percentajeAccert, specifier: "%.0f") %"),
                                   rightText: Text("\(statisticsVM.staticticsModel.percentajeCapture, specifier: "%.0f") %"))
                 }
@@ -57,9 +57,22 @@ struct StatisticsView: View {
                         Text(statisticsVM.suggestionText)
                     }
                 }
+                
+                Button {
+                    statisticsVM.exportStatistics()
+                } label: {
+                    Text("Exportar estadísticas")
+                }
+                .buttonStyle(SecondaryButton())
+                .padding(16)
             }
             .background(Color("SecondBlue"))
             .scrollContentBackground(.hidden)
+            .sheet(isPresented: $statisticsVM.showShareSheet) {
+                if let pdfURL = statisticsVM.pdfURL {
+                    ShareSheet(activityItems: [pdfURL])
+                }
+            }
         }
         .navigationBarBackButtonHidden()
     }
