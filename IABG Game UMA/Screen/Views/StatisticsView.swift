@@ -78,7 +78,10 @@ struct StatisticsView: View {
     }
 }
 
+// MARK: - Subviews
+
 private extension StatisticsView {
+    
     func statisticsSection(title: String, subtitle: String? = nil, @ViewBuilder content: () -> some View) -> some View {
         Section {
             if let subtitle = subtitle {

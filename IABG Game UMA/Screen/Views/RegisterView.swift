@@ -91,31 +91,27 @@ struct RegisterView: View {
                 .background(Color("SecondBlue"))
                 .scrollContentBackground(.hidden)
 
-                MainActionButton(title: "Register_Button", isEnabled: loginVM.allValidate()) {
+                MainActionButton(title: NSLocalizedString("Register_Button", comment: ""), isEnabled: loginVM.allValidate()) {
                     loginVM.startRegistrationProcess()
                 }
                 .background(Color("SecondBlue"))
             }
             .toolbar(.hidden)
-            .alert("App Warning", isPresented: $loginVM.showAlert) {
-                Button("OK", role: .cancel) {
-                    if loginVM.navigateToLogin {
-                        path.removeAll()
-                    }
+            .reusableCustomAlert( isPresented:  $loginVM.showAlert,
+                                    title: "App Info",
+                                    message: loginVM.msg,
+                                    buttonText: NSLocalizedString("Confirmar", comment: "")
+            ){
+                if loginVM.navigateToLogin {
+                    path.removeAll()
                 }
-            } message: {
-                Text(loginVM.msg)
             }
         }
     }
 }
 
-#Preview {
-    RegisterView(path: .constant([Constants.NavigationDestination.registerView]), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
-}
 
-
-// MARK: - Register components
+// MARK: - Subviews
 
 struct FormSection<Content: View>: View {
     let header: String
@@ -170,5 +166,8 @@ struct MainActionButton: View {
 }
 
 
+#Preview {
+    RegisterView(path: .constant([Constants.NavigationDestination.registerView]), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
+}
 
 

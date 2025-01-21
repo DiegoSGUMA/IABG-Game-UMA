@@ -47,10 +47,11 @@ struct LoginView: View {
                 .onReceive(loginVM.eventPublisher) { event in
                     clearPathAfterDelay()
                 }
-                .alert("App Warning", isPresented: $loginVM.showAlert) {
-                } message: {
-                    Text(loginVM.msg)
-                }
+                .reusableCustomAlert( isPresented: $loginVM.showAlert,
+                                        title: "App Info",
+                                        message: loginVM.msg,
+                                        buttonText: NSLocalizedString("Confirmar", comment: "")
+                ){ }
             }
         }
     }
@@ -62,7 +63,10 @@ struct LoginView: View {
         }
     }
 
-    // Subvistas
+    
+    
+    // MARK: - Subviews
+    
     private func logoView() -> some View {
         Image("cutIcon")
             .resizable()

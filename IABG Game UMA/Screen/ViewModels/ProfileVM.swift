@@ -29,8 +29,6 @@ final class ProfileVM: ObservableObject {
         self.mainRepository.delegate = self
     }
 
-    // MARK: - Image Handling
-
     private func processSelectedImage() {
         guard let imageSelector else { return }
         Task {
@@ -41,8 +39,6 @@ final class ProfileVM: ObservableObject {
             }
         }
     }
-
-    // MARK: - Update Logic
 
     func updateElements(username: String, password: String) {
         guard validateFields(username: username, password: password) else {
@@ -89,16 +85,12 @@ final class ProfileVM: ObservableObject {
         mainRepository.updateProfile(profile: profileRequest)
     }
 
-    // MARK: - Alerts
-
     func showInfo(message: String, info: Bool, logout: Bool) {
         showAlert.toggle()
         self.infoOnly = info
         self.logOut = logout
         self.msg = message
     }
-
-    // MARK: - Logout
 
     func signOut() {
         do {

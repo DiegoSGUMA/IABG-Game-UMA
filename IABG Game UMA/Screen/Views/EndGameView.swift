@@ -46,6 +46,7 @@ struct EndGameView: View {
                     .listRowBackground(Color.clear)
                 }
             }
+            .scrollContentBackground(.hidden)
             .background(Color("SecondBlue"))
             
             Spacer()
@@ -70,14 +71,16 @@ struct EndGameView: View {
                 .presentationDetents([.medium, .large])
                 .background(Color("Button_Medium").edgesIgnoringSafeArea(.all))
         }
-        .alert("App Warning", isPresented: $endGameVM.showAlert) {
-            Button("Ir al inicio") {
-                path.removeAll()
-            }
-        } message: {
-            Text(endGameVM.msg)
+        .reusableCustomAlert( isPresented: $endGameVM.showAlert,
+                              title: "App Info",
+                              message: endGameVM.msg,
+                              buttonText: NSLocalizedString("Ir al inicio", comment: "")
+        ){
+            path.removeAll()
         }
     }
+    
+    // MARK: - Subviews
     
     private var sectionHeaderView: some View {
         HStack {

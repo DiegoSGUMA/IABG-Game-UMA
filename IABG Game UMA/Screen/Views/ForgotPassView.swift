@@ -26,18 +26,20 @@ struct ForgotPassView: View {
 
             form
             sendEmailButton
-            
-            .alert("App Warning", isPresented: $resetPasswordToggle) {
-                Button("OK", role: .cancel) {
-                    path.removeLast()
-                }
-            } message: {
-                Text(alertMessage)
+            .reusableCustomAlert( isPresented: $resetPasswordToggle,
+                                    title: "App Info",
+                                    message: alertMessage,
+                                    buttonText: NSLocalizedString("Confirmar", comment: "")
+            ){
+                path.removeLast()
             }
         }
         .background(Color("SecondBlue"))
         .toolbar(.hidden)
     }
+    
+    
+    // MARK: - Subviews
     
     private var headerBar: some View {
         HeaderBar(title: NSLocalizedString("Recover password", comment: "")) {

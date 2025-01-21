@@ -9,7 +9,8 @@ import Foundation
 
 class BaseAPI: APIServices {
     
-    /// Maneja respuestas genéricas de servicios SOAP con condiciones de éxito específicas.
+    //Control de las peticiones y respuestas SOAP
+    
     func handleSOAPResponse(
         result: Result<Data, Error>,
         successCondition: (String) -> Bool,
@@ -28,7 +29,6 @@ class BaseAPI: APIServices {
         }
     }
     
-    /// Maneja respuestas de servicios SOAP que retornan un modelo decodificado.
     func handleSOAPResponseWithModel<T: Decodable>(
         result: Result<Data, Error>,
         modelType: T.Type,

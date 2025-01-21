@@ -114,7 +114,6 @@ func createCustomPDF(statistic: StatisticsModel, recomendation: String) -> URL? 
                 let col1Text = "\(cols1[row])"
                 let col2Text = "\(cols2[row])"
 
-                // Calcula el tamaño requerido para cada columna
                 let col1Size = col1Text.boundingRect(
                     with: CGSize(width: tableColumnWidth - 10, height: .greatestFiniteMagnitude),
                     options: .usesLineFragmentOrigin,
@@ -128,7 +127,6 @@ func createCustomPDF(statistic: StatisticsModel, recomendation: String) -> URL? 
                     context: nil
                 )
 
-                // Determina la altura de la fila en función del contenido más alto
                 let rowHeight = max(col1Size.height, col2Size.height) + 10
                 
                 let col1Rect = CGRect(x: margin, y: currentY, width: tableColumnWidth, height: rowHeight)

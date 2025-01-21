@@ -41,12 +41,17 @@
 		C369AE6E2D08430100280B45 /* HeaderBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6C2D0842F800280B45 /* HeaderBar.swift */; };
 		C369AE702D0843FC00280B45 /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6F2D0843F500280B45 /* ToggleStyles.swift */; };
 		C369AE712D0843FC00280B45 /* ToggleStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C369AE6F2D0843F500280B45 /* ToggleStyles.swift */; };
+		C373132F2D3C3188009AC992 /* MainMenuModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C373132E2D3C316F009AC992 /* MainMenuModelTests.swift */; };
+		C37313312D3C36D1009AC992 /* GameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37313302D3C36C9009AC992 /* GameModelTests.swift */; };
+		C37313322D3C397B009AC992 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30ABC602CEE45C100E2A50C /* RegisterView.swift */; };
+		C37313332D3C398F009AC992 /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3BDAB312CB6EC3100A2F752 /* String+Additions.swift */; };
 		C38CC1AD2D2B0B5500B75499 /* MainMenuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */; };
 		C38CC1AE2D2B0B5500B75499 /* MainMenuAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */; };
 		C38CC1B02D2B0FD600B75499 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */; };
 		C38CC1B12D2B0FD600B75499 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */; };
 		C38CC1B62D2B107200B75499 /* EndGameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */; };
 		C38CC1B72D2B107200B75499 /* EndGameAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */; };
+		C3A4E7DD2D3D6D65005A97AB /* MainMenuViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A4E7DC2D3D6D5C005A97AB /* MainMenuViewTests.swift */; };
 		C3A731972D19C4D200308B98 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731962D19C4CD00308B98 /* MainMenuModel.swift */; };
 		C3A731982D19C4D200308B98 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731962D19C4CD00308B98 /* MainMenuModel.swift */; };
 		C3A7319A2D19CA6700308B98 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A731992D19CA6200308B98 /* Avatar.swift */; };
@@ -104,9 +109,8 @@
 		C3DFA7692CDBE46C004F18E2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C3DFA7682CDBE46C004F18E2 /* FirebaseAuth */; };
 		C3DFA76B2CDBE46C004F18E2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C3DFA76A2CDBE46C004F18E2 /* FirebaseFirestore */; };
 		C3DFA76D2CDBE46C004F18E2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C3DFA76C2CDBE46C004F18E2 /* FirebaseStorage */; };
-		C3DFA76F2CDBE4DE004F18E2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C3DFA76E2CDBE4DE004F18E2 /* FirebaseAuth */; };
-		C3DFA7712CDBE4DE004F18E2 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C3DFA7702CDBE4DE004F18E2 /* FirebaseFirestore */; };
-		C3DFA7732CDBE4DE004F18E2 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C3DFA7722CDBE4DE004F18E2 /* FirebaseStorage */; };
+		C3E41FBF2D3C564E00429C3D /* MainMenuVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E41FBE2D3C564100429C3D /* MainMenuVMTests.swift */; };
+		C3E41FC22D3C570300429C3D /* MainMenuVMMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E41FC12D3C56FD00429C3D /* MainMenuVMMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,9 +155,12 @@
 		C35F14E82C8F49EE00356C56 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C369AE6C2D0842F800280B45 /* HeaderBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderBar.swift; sourceTree = "<group>"; };
 		C369AE6F2D0843F500280B45 /* ToggleStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleStyles.swift; sourceTree = "<group>"; };
+		C373132E2D3C316F009AC992 /* MainMenuModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuModelTests.swift; sourceTree = "<group>"; };
+		C37313302D3C36C9009AC992 /* GameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTests.swift; sourceTree = "<group>"; };
 		C38CC1AC2D2B0B4C00B75499 /* MainMenuAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuAPI.swift; sourceTree = "<group>"; };
 		C38CC1AF2D2B0FD200B75499 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		C38CC1B52D2B106B00B75499 /* EndGameAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameAPI.swift; sourceTree = "<group>"; };
+		C3A4E7DC2D3D6D5C005A97AB /* MainMenuViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewTests.swift; sourceTree = "<group>"; };
 		C3A731962D19C4CD00308B98 /* MainMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
 		C3A731992D19CA6200308B98 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		C3A8E43C2D33E80E00E6B92B /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
@@ -182,6 +189,8 @@
 		C3CA18122CB451CE00A6AF00 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		C3CA18152CB46D3400A6AF00 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 		C3DFA7652CDBE31F004F18E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C3E41FBE2D3C564100429C3D /* MainMenuVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVMTests.swift; sourceTree = "<group>"; };
+		C3E41FC12D3C56FD00429C3D /* MainMenuVMMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuVMMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,9 +209,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3DFA76F2CDBE4DE004F18E2 /* FirebaseAuth in Frameworks */,
-				C3DFA7712CDBE4DE004F18E2 /* FirebaseFirestore in Frameworks */,
-				C3DFA7732CDBE4DE004F18E2 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +281,8 @@
 		C35F14C82C8EE11200356C56 /* IABG Game UMATests */ = {
 			isa = PBXGroup;
 			children = (
+				C3E41FC02D3C56E600429C3D /* Mocks */,
+				C373132A2D3C3140009AC992 /* Screens */,
 				C35F14C92C8EE11200356C56 /* IABG_Game_UMATests.swift */,
 			);
 			path = "IABG Game UMATests";
@@ -287,6 +295,41 @@
 				C35F14D52C8EE11200356C56 /* IABG_Game_UMAUITestsLaunchTests.swift */,
 			);
 			path = "IABG Game UMAUITests";
+			sourceTree = "<group>";
+		};
+		C373132A2D3C3140009AC992 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C373132B2D3C3149009AC992 /* Models */,
+				C373132C2D3C314F009AC992 /* Views */,
+				C373132D2D3C3158009AC992 /* ViewModels */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C373132B2D3C3149009AC992 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C37313302D3C36C9009AC992 /* GameModelTests.swift */,
+				C373132E2D3C316F009AC992 /* MainMenuModelTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C373132C2D3C314F009AC992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C3A4E7DC2D3D6D5C005A97AB /* MainMenuViewTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C373132D2D3C3158009AC992 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C3E41FBE2D3C564100429C3D /* MainMenuVMTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C3B4C3BF2CB5A39E0075B638 /* API */ = {
@@ -389,6 +432,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		C3E41FC02D3C56E600429C3D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C3E41FC12D3C56FD00429C3D /* MainMenuVMMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -430,9 +481,6 @@
 			);
 			name = "IABG Game UMATests";
 			packageProductDependencies = (
-				C3DFA76E2CDBE4DE004F18E2 /* FirebaseAuth */,
-				C3DFA7702CDBE4DE004F18E2 /* FirebaseFirestore */,
-				C3DFA7722CDBE4DE004F18E2 /* FirebaseStorage */,
 			);
 			productName = "IABG Game UMATests";
 			productReference = C35F14C52C8EE11200356C56 /* IABG Game UMATests.xctest */;
@@ -590,6 +638,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3A4E7DD2D3D6D65005A97AB /* MainMenuViewTests.swift in Sources */,
+				C3E41FBF2D3C564E00429C3D /* MainMenuVMTests.swift in Sources */,
+				C37313322D3C397B009AC992 /* RegisterView.swift in Sources */,
 				C355463E2D1C2F340035DCCF /* GameModel.swift in Sources */,
 				C3BD488B2D18926600EFA9DF /* MainMenuVM.swift in Sources */,
 				C35546412D1C2F840035DCCF /* Random.swift in Sources */,
@@ -599,6 +650,7 @@
 				C3CA180D2CB44E2C00A6AF00 /* LoginVM.swift in Sources */,
 				C38CC1B12D2B0FD600B75499 /* BaseAPI.swift in Sources */,
 				C3B0EA412D205AB7000E2474 /* StatisticsView.swift in Sources */,
+				C37313332D3C398F009AC992 /* String+Additions.swift in Sources */,
 				C3B4C3C22CB5A3B00075B638 /* LoginAPI.swift in Sources */,
 				C3C1998D2C91F89A0059AA26 /* SplashView.swift in Sources */,
 				C3CA18142CB451CE00A6AF00 /* TextField.swift in Sources */,
@@ -611,6 +663,7 @@
 				C34E49372D307E9F00DFF544 /* Alert.swift in Sources */,
 				C3B0EA4A2D206DD5000E2474 /* ProfileVM.swift in Sources */,
 				C3C1998A2C91F8900059AA26 /* LoginView.swift in Sources */,
+				C37313312D3C36D1009AC992 /* GameModelTests.swift in Sources */,
 				C35546372D1C2A4D0035DCCF /* GameView.swift in Sources */,
 				C3C199492C91EF850059AA26 /* UserDefaults+Adittions.swift in Sources */,
 				C369AE6E2D08430100280B45 /* HeaderBar.swift in Sources */,
@@ -623,12 +676,14 @@
 				C3C199942C91FC810059AA26 /* LottieVM.swift in Sources */,
 				C3A8E43D2D33E81500E6B92B /* ShareSheet.swift in Sources */,
 				C35F14CA2C8EE11200356C56 /* IABG_Game_UMATests.swift in Sources */,
+				C373132F2D3C3188009AC992 /* MainMenuModelTests.swift in Sources */,
 				C3B0EA432D205C61000E2474 /* StatisticsVM.swift in Sources */,
 				C38CC1B72D2B107200B75499 /* EndGameAPI.swift in Sources */,
 				C355464E2D1C73CA0035DCCF /* EndGameVM.swift in Sources */,
 				C3CA18172CB46D3400A6AF00 /* Validations.swift in Sources */,
 				C369AE712D0843FC00280B45 /* ToggleStyles.swift in Sources */,
 				C3B0EA462D206399000E2474 /* ProfileView.swift in Sources */,
+				C3E41FC22D3C570300429C3D /* MainMenuVMMock.swift in Sources */,
 				C3B4C3C52CB5A5A50075B638 /* APIServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -990,21 +1045,6 @@
 			productName = FirebaseFirestore;
 		};
 		C3DFA76C2CDBE46C004F18E2 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3DFA7672CDBE46C004F18E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		C3DFA76E2CDBE4DE004F18E2 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3DFA7672CDBE46C004F18E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		C3DFA7702CDBE4DE004F18E2 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3DFA7672CDBE46C004F18E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		C3DFA7722CDBE4DE004F18E2 /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3DFA7672CDBE46C004F18E2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;

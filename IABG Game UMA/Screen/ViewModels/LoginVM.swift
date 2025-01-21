@@ -124,7 +124,7 @@ final class LoginVM: ObservableObject {
     }
 }
 
-// MARK: - LoginAPI Delegate Methods
+// MARK: - LoginAPI Delegate
 
 extension LoginVM: LoginApiDelegate {
     

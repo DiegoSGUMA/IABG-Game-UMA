@@ -12,7 +12,6 @@ struct ContentView: View {
     @State private var showSplach = true
     @State private var path: [Constants.NavigationDestination] = []
     
-    
     var body: some View {
         ZStack {
             if showSplach {

@@ -24,14 +24,14 @@ struct ResultInfoView: View {
         .padding()
     }
     
-    // Subvista para mostrar texto de información
+    // MARK: - Subviews
+    
     private func infoText(_ text: String) -> some View {
         Text(text)
             .lineLimit(nil)
             .padding(.horizontal)
     }
 
-    // Subvista para mostrar leyenda de predicciones con círculos de colores
     private func predictionLegend(color: Color, description: String) -> some View {
         HStack {
             Circle()

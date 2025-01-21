@@ -266,6 +266,7 @@
       }
     },
     "App Info" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {
@@ -276,6 +277,7 @@
       }
     },
     "App Warning" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -363,6 +365,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Confirmar contraseña"
+          }
+        }
+      }
+    },
+    "Confirmar" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ok"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confirmar"
           }
         }
       }
@@ -732,6 +750,7 @@
       }
     },
     "Ir al menu principal" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -828,6 +847,7 @@
       }
     },
     "OK" : {
+      "extractionState" : "stale",
       "localizations" : {
         "es" : {
           "stringUnit" : {

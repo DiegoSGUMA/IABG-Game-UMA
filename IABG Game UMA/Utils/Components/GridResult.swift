@@ -14,7 +14,6 @@ struct GridResultView: View {
 
     var body: some View {
         HStack {
-            // Imagen del elemento
             Image("game_\(element.index)")
                 .resizable()
                 .scaledToFit()
@@ -24,7 +23,6 @@ struct GridResultView: View {
             
             Spacer(minLength: 20)
             
-            // Vista para mostrar resultados o el TextField
             Group {
                 if checked {
                     checkedResultView
@@ -40,7 +38,6 @@ struct GridResultView: View {
         .cornerRadius(10)
     }
 
-    // Subvista para los resultados cuando `checked` es true
     private var checkedResultView: some View {
         VStack(alignment: .leading) {
             Text("\(result ?? 0) - \(element.realResult)")
@@ -49,7 +46,6 @@ struct GridResultView: View {
         .font(.body)
     }
 
-    // Subvista para el campo editable cuando `checked` es false
     private var editableResultView: some View {
         TextField("", value: $result, format: .number)
             .cornerRadius(10)
@@ -59,7 +55,6 @@ struct GridResultView: View {
             .submitLabel(.done)
     }
 
-    // Color de fondo dinámico según el estado
     private var backgroundColor: Color {
         if !checked {
             return Color("HardLevel")

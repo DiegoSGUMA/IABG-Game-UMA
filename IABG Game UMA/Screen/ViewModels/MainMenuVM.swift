@@ -41,6 +41,8 @@ final class MainMenuVM: ObservableObject {
     }
 }
 
+// MARK: - MainMenuApi Delegate
+
 extension MainMenuVM: MainMenuApiDelegate {
 
     func getUserInfoSucces(model: GetUserAllInfoResult) {

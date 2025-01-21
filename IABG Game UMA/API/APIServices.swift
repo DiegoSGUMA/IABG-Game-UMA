@@ -51,7 +51,7 @@ class APIServices {
     }
     
 
-    //función que a lo mejor tengo que usar para los xml simples pero que contengan arrays como el de estadistica
+    // Control del xml para SOAP
     
     func generateXMLSimple<T>(serviceName: String, model: T) -> String {
         let mirror = Mirror(reflecting: model)
@@ -92,9 +92,9 @@ class APIServices {
 
 
 class XMLModelParser: NSObject, XMLParserDelegate {
+    
     var currentElement = ""
     var tempValue = ""
-    
     var user: User?
     var statistics: StatisticsGame?
     var lastPlays: [Int] = []

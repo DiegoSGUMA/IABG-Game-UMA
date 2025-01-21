@@ -34,13 +34,21 @@ struct ProfileView: View {
             }
             .background(Color("SecondBlue"))
             .navigationBarBackButtonHidden()
-            .alert("App Warning", isPresented: $profileVM.showAlert) {
-                alertActions
-            } message: {
-                Text(profileVM.msg)
+            .reusableCustomAlert( isPresented: $profileVM.showAlert,
+                                  title: "App Info",
+                                  message: profileVM.msg,
+                                  buttonText: NSLocalizedString("Confirmar", comment: "")
+            ) {
+                if !profileVM.infoOnly, !profileVM.logOut {
+                    path.removeAll()
+                } else if profileVM.logOut {
+                    path.append(Constants.NavigationDestination.loginView)
+                }
             }
         }
     }
+    
+    // MARK: - Subviews
 
     private var headerBar: some View {
         HeaderBar(title: NSLocalizedString("Profile", comment: "")) {
@@ -51,7 +59,6 @@ struct ProfileView: View {
     private var profileImageSection: some View {
         VStack {
             Button {
-                // Logic for image change can be added here
             } label: {
                 VStack {
                     let imageName = profileVM.profileInfo.profilePicture ?? ""
@@ -138,18 +145,6 @@ struct ProfileView: View {
                 .padding(.horizontal, 30)
         }
         .padding(.vertical, 7)
-    }
-
-    private var alertActions: some View {
-        Button {
-            if !profileVM.infoOnly, !profileVM.logOut {
-                path.removeAll()
-            } else if profileVM.logOut {
-                path.append(Constants.NavigationDestination.loginView)
-            }
-        } label: {
-            Text(profileVM.infoOnly ? "OK" : "Ir al menu principal")
-        }
     }
 
     private func detailRow(label: String, value: String) -> some View {

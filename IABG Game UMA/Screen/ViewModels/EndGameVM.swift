@@ -11,7 +11,7 @@ import SwiftUI
 final class EndGameVM: ObservableObject {
     
     @Published var elements: [EndGameModel]
-    @Published var icons: [Int?] = Array(repeating: nil, count: 7) // Reemplaza icon1, icon2... con un array
+    @Published var icons: [Int?] = Array(repeating: nil, count: 7)
     @Published var comprobe: Bool = false
     @Published var showAlert = false
     @Published var msg = ""
@@ -107,6 +107,8 @@ final class EndGameVM: ObservableObject {
     }
 }
 
+// MARK: - EndGameApi Delegate
+
 extension EndGameVM: EndGameApiDelegate {
     func saveResultSucces() {
         showInfo(error: NSLocalizedString("save_result_success", comment: ""))
@@ -118,7 +120,6 @@ extension EndGameVM: EndGameApiDelegate {
 }
 
 private extension Array {
-    /// Safe index accessor to avoid out-of-bounds errors.
     subscript(safe index: Int) -> Element? {
         return indices.contains(index) ? self[index] : nil
     }

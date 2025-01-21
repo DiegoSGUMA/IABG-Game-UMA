@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseAuth
 
 struct MainMenuView: View {
-    @State private var path: [Constants.NavigationDestination] = []
+    @State var path: [Constants.NavigationDestination] = []
     @State private var resetID = UUID()
     @ObservedObject var mainMenuVM: MainMenuVM
     @State private var levelSelected: levels = .none
@@ -44,15 +44,14 @@ struct MainMenuView: View {
                     .foregroundColor(.black)
                     .background(Color("SecondBlue"))
                     .navigationBarBackButtonHidden()
-                    .alert("App Info", isPresented: $mainMenuVM.showAlert) {
-                        Button("OK", role: .cancel) { }
-                    } message: {
-                        Text(mainMenuVM.msg)
-                    }
+                    .reusableCustomAlert( isPresented: $mainMenuVM.showAlert,
+                                          title: "App Info",
+                                          message: mainMenuVM.msg,
+                                          buttonText: NSLocalizedString("Confirmar", comment: "")
+                    ){ }
                 }
             }
             .onAppear {
-                print("Entro en el main")
                 handleOnAppear()
             }
             .id(resetID)
@@ -89,7 +88,6 @@ struct ProfileButton: View {
     
     var body: some View {
         Button {
-            //arreglar el path
             path.append(.profileView(profile: mainMenuVM.profileModel))
         } label: {
             VStack {
