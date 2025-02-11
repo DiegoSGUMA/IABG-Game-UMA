@@ -23,6 +23,9 @@ struct LoginView: View {
             if loginVM.isLoading {
                 ProgressView()
                     .toolbar(.hidden)
+                    .onReceive(loginVM.eventPublisher) { event in
+                        clearPathAfterDelay()
+                    }
             } else {
                 VStack {
                     logoView()

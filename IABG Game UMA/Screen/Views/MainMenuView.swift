@@ -227,7 +227,7 @@ extension MainMenuView {
     func navigationDestinationView(for destination: Constants.NavigationDestination) -> some View {
         switch destination {
         case .registerView:
-            RegisterView(path: $path, loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
+            RegisterView(path: $path,resetID: $resetID, loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
         case .forgotView:
             ForgotPassView(loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")), path: $path)
         case .loginView:

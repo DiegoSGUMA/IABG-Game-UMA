@@ -53,8 +53,10 @@ final class EndGameVM: ObservableObject {
             let diference = abs(element.realResult - element.posibleResult)
             if diference == 0 {
                 comprobacion = Double(element.realResult)
+                totalPredictions += element.realResult
             } else  {
                 comprobacion = diference >= element.realResult ? 0 : Double(element.realResult - diference)
+                totalPredictions += diference >= element.realResult ? 0 : element.realResult - diference
             }
             
             let prediction = element.realResult > 0 ? comprobacion / Double(element.realResult) : 0
@@ -63,7 +65,6 @@ final class EndGameVM: ObservableObject {
             totalAccert += prediction
             totalCollected += collected
             totalRealResult += element.realResult
-            totalPredictions += diference
         }
         
         let count = Double(elements.count)

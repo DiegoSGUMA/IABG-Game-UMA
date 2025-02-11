@@ -154,7 +154,7 @@ private func getTableElements(statistic: StatisticsModel, recomendation: String)
     
     var lastGames = ""
     statistic.lastPlays.prefix(6).forEach{ play in
-        lastGames += "\(statistic.percentajeCapture) %  |  "
+        lastGames += "\(play) %  |  "
     }
     
     let result: [String: String]  = [NSLocalizedString("Your level:", comment: "") : getLevelName(statistic.level),

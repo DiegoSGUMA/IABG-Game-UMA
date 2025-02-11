@@ -10,6 +10,7 @@ import SwiftUI
 
 struct RegisterView: View {
     @Binding var path: [Constants.NavigationDestination]
+    @Binding var resetID: UUID
     @State private var check = true
     @FocusState var field: Fields?
     @ObservedObject var loginVM: LoginVM
@@ -104,6 +105,7 @@ struct RegisterView: View {
             ){
                 if loginVM.navigateToLogin {
                     path.removeAll()
+                    resetID = UUID()
                 }
             }
         }
@@ -167,7 +169,7 @@ struct MainActionButton: View {
 
 
 #Preview {
-    RegisterView(path: .constant([Constants.NavigationDestination.registerView]), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
+    RegisterView(path: .constant([Constants.NavigationDestination.registerView]),resetID: .constant(UUID()), loginVM: LoginVM(user: UserModel(userID: "", userName: "", pwd: "", email: "")))
 }
 
 

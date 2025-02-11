@@ -24,7 +24,7 @@ final class LoginVM: ObservableObject {
     @Published var pdfURL: URL?
     
     let eventPublisher = PassthroughSubject<Bool, Never>()
-    private let errorData = NSLocalizedString("Server_data_error", comment: "")
+    let errorData = NSLocalizedString("Server_data_error", comment: "")
     var userRepository = LoginAPI()
     var userProvisionalModel: UserModel = UserModel(userID: "", userName: "", pwd: "", email: "")
     
@@ -129,10 +129,10 @@ final class LoginVM: ObservableObject {
 extension LoginVM: LoginApiDelegate {
     
     func updatePassSuccess() {
-        
-        isLoading = false
-        loginToggle.toggle()
-        eventPublisher.send(true)
+        DispatchQueue.main.async {
+            self.loginToggle.toggle()
+            self.eventPublisher.send(true)
+        }
     }
     
     func updatePassError(error: String) {
